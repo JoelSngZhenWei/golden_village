@@ -3,9 +3,11 @@ import { BiLogoGmail } from "react-icons/bi";
 import { FaApple } from "react-icons/fa";
 import Link
  from "next/link";
+import { Header } from "@/components/header";
 export default function Home() {
   return (
     <section className="h-full mt-2">
+      <Header />
       <div className="container mx-auto h-full">
         <div className="flex flex-col items-center justify-center">
           {/* Logo */}
