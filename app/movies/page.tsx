@@ -1,24 +1,24 @@
 import { Button } from "@/components/ui/button";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaApple } from "react-icons/fa";
-import Link from "next/link";
-import { motion } from "framer-motion";
-import Photo from "@/components/Photo";
-
+import Link
+ from "next/link";
 export default function Home() {
   return (
     <section className="h-full mt-2">
       <div className="container mx-auto h-full">
         <div className="flex flex-col items-center justify-center">
           {/* Logo */}
-          <Photo />
+          <div className="mb-5">
+            Image
+          </div>
           {/* Login Group */}
           <div className="text-center w-full space-y-3">
             <Link href={'/movies'}>
-              <Button className="w-full py-6 text-base bg-slate-700">
-                Log in to GV
-              </Button>
             </Link>
+            <Button className="w-full py-6 text-base bg-slate-700">
+                Log in to GV
+            </Button>
 
             <div className="relative flex items-center py-2">
               <div className="flex-grow border-t border-gray-300"></div>
@@ -38,7 +38,7 @@ export default function Home() {
               </Button>
             </div>
 
-            <p className="text-xs text-start text-muted-foreground mt-4">
+            <p className="text-xs text-muted-foreground mt-4">
               Security Advisory: Beware of calls from scammers claiming to be from Golden Village. Do not give away your login/payment details to anyone. <span className="text-blue-500 hover:underline">Learn more</span>
             </p>
           </div>
