@@ -7,13 +7,15 @@ import Photo from "@/components/Photo";
 export default function Home() {
   return (
     <section className="h-full mt-2">
-      <div className="container mx-auto h-full">
-        <div className="flex flex-col items-center justify-center">
+      <div className="container px-2 h-full">
+        <div className="flex flex-col items-center space-y-4 justify-center py-24 align">
           {/* Logo */}
-          <Photo />
+          <div>
+            <Photo />
+          </div>
           {/* Login Group */}
           <div className="text-center w-full space-y-3">
-            <Link href={'/movies'}>
+            <Link href={'/home'}>
               <Button className="w-full py-6 text-base bg-slate-700">
                 Log in to GV
               </Button>
