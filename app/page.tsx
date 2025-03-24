@@ -2,7 +2,6 @@ import { Button } from "@/components/ui/button";
 import { BiLogoGmail } from "react-icons/bi";
 import { FaApple } from "react-icons/fa";
 import Link from "next/link";
-import { motion } from "framer-motion";
 import Photo from "@/components/Photo";
 
 export default function Home() {
