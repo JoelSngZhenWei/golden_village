@@ -11,7 +11,6 @@ import { BookmarkIcon, TicketIcon } from "lucide-react"
 type Movie = {
   title: string
   image: string
-  description?: string
 }
 
 // Component can accept either an object/dictionary or array of movies

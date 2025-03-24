@@ -11,7 +11,7 @@ export function BottomNav() {
 
   const navigation = [
     { name: "Dine", href: "", icon: Utensils },
-    { name: "Movies", href: "", icon: Film },
+    { name: "Movies", href: "/movies", icon: Film },
     { name: "Home", href: "/home", icon: Home },
     { name: "Rewards", href: "", icon: Trophy },
     { name: "Profile", href: "", icon: User },

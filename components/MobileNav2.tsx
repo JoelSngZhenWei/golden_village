@@ -67,9 +67,6 @@ const MobileSidebar = () => {
           {/* Additional navigation items can be added here */}
           <p className="text-muted-foreground text-sm">More to come here</p>
 
-          {/* Divider before logout */}
-          <div className="h-px w-full bg-foreground/10 my-2" />
-
           {/* Separate Logout Button */}
           <Link href='/'>
             <Button

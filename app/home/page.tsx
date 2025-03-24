@@ -10,49 +10,76 @@ const carouselmovies = {
   captainamerica: {
     title: "Captain America: Brave New World",
     image: "/movieposters/captainamerica.JPG",
-    description: "A team of explorers travel through a wormhole in space.",
+    genre: "Action",
+    language: "English",
   },
-  inception: {
+  wicked: {
     title: "Wicked",
     image: "/movieposters/wicked.JPG",
-    description: "A thief who steals corporate secrets through the use of dream-sharing technology.",
+    genre: "Fantasy",
+    language: "English",
   },
   apple: {
     title: "You are the Apple of My Eye",
     image: "/movieposters/appleofmyeye.jpg",
-    description: "Batman fights the menace known as the Joker.",
+    genre: "Romance",
+    language: "Mandarin",
   },
-  pulpFiction: {
+  chhaava: {
+    title: "Chaava",
+    image: "/movieposters/chhaava.jpg",
+    genre: "Historical",
+    language: "Hindi",
+  },
+  snowwhite: {
     title: "Snow White",
     image: "/movieposters/snowwhite.jpeg",
-    description: "The lives of two mob hitmen, a boxer, and a pair of diner bandits intertwine.",
+    genre: "Fantasy",
+    language: "English",
   },
-  shawshank: {
+  dragon: {
+    title: "Dragon",
+    image: "/movieposters/dragon.jpg",
+    genre: "Action",
+    language: "Tamil",
+  },
+  nezha: {
     title: "Ne Zha 2",
     image: "/movieposters/nezha.jpg",
-    description: "Two imprisoned men bond over a number of years.",
+    genre: "Fantasy",
+    language: "Mandarin",
   },
 }
 
 // Sample data for movies
 const latestMovies = [
-  { id: 1, title: "Snow White", imageUrl: "/movieposters/snowwhite.jpeg" },
-  { id: 2, title: "Mickey 17", imageUrl: "/movieposters/mickey17.jpg" },
-  { id: 3, title: "Close ur Kopitiam", imageUrl: "/movieposters/kopitiam.jpg" },
-  { id: 4, title: "Dragon", imageUrl: "/movieposters/dragon.jpg" },
-  { id: 5, title: "Mufasa", imageUrl: "/movieposters/mufasa.jpg" },
-  { id: 6, title: "Ne Zha 2", imageUrl: "/movieposters/nezha.jpg" },
-  { id: 7, title: "Captain America: Brave New World", imageUrl: "/movieposters/captainamerica.JPG" },
-  { id: 8, title: "You are the Apple of my Eye", imageUrl: "/movieposters/appleofmyeye.jpg" },
-  { id: 9, title: "Chhaava", imageUrl: "/movieposters/chhaava.jpg" },
+  { title: "Snow White", image: "/movieposters/snowwhite.jpeg", genre: "Fantasy", language: "English" },
+  { title: "Mickey 17", image: "/movieposters/mickey17.jpg", genre: "Sci-Fi", language: "English" },
+  { title: "Close ur Kopitiam", image: "/movieposters/kopitiam.jpg", genre: "Drama", language: "Mandarin" },
+  { title: "Dragon", image: "/movieposters/dragon.jpg", genre: "Action", language: "Tamil" },
+  { title: "Mufasa", image: "/movieposters/mufasa.jpg", genre: "Fantasy", language: "English" },
+  { title: "Ne Zha 2", image: "/movieposters/nezha.jpg", genre: "Fantasy", language: "Mandarin" },
+  {
+    title: "Captain America: Brave New World",
+    image: "/movieposters/captainamerica.JPG",
+    genre: "Action",
+    language: "English",
+  },
+  {
+    title: "You are the Apple of my Eye",
+    image: "/movieposters/appleofmyeye.jpg",
+    genre: "Romance",
+    language: "Mandarin",
+  },
+  { title: "Chhaava", image: "/movieposters/chhaava.jpg", genre: "Historical", language: "Hindi" },
 ]
 
 const recommendations = [
-  { id: 1, title: "Mickey 17", imageUrl: "/movieposters/mickey17.jpg" },
-  { id: 2, title: "Ne Zha 2", imageUrl: "/movieposters/nezha.jpg" },
-  { id: 3, title: "Mufasa", imageUrl: "/movieposters/mufasa.jpg" },
-  { id: 4, title: "Chhaava", imageUrl: "/movieposters/chhaava.jpg" },
-  { id: 5, title: "Wicked", imageUrl: "/movieposters/wicked.JPG" },
+  { title: "Mickey 17", image: "/movieposters/mickey17.jpg", genre: "Sci-Fi", language: "English" },
+  { title: "Ne Zha 2", image: "/movieposters/nezha.jpg", genre: "Fantasy", language: "Mandarin" },
+  { title: "Mufasa", image: "/movieposters/mufasa.jpg", genre: "Fantasy", language: "English" },
+  { title: "Chhaava", image: "/movieposters/chhaava.jpg", genre: "Historical", language: "Hindi" },
+  { title: "Wicked", image: "/movieposters/wicked.JPG", genre: "Fantasy", language: "English" },
 ]
 
 
@@ -88,7 +115,7 @@ const recommendationInfo = {
   ),
 }
 
-export default function Movies() {
+export default function Home() {
   return (
     <section className="">
       <Header />
