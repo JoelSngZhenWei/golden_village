@@ -3,13 +3,15 @@
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
-import { Menu, User } from "lucide-react"
+import { Menu, User, HomeIcon, LogOut } from "lucide-react"
 import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
+import { Button } from "@/components/ui/button"
 
+// Updated links array without Logout
 const links = [
-  { name: "home", path: "/home" },
-  { name: "Logout", path: "/" },
+  { name: "home", path: "/home", icon: HomeIcon },
+  // Add more navigation links here as needed
 ]
 
 const MobileSidebar = () => {
@@ -39,7 +41,7 @@ const MobileSidebar = () => {
               <p className="text-sm text-muted-foreground font-bold">Gold Class Member</p>
             </div>
           </div>
-          <div className="h-px w-full bg-foreground/20 " />
+          <div className="h-px w-full bg-foreground/20" />
         </SheetHeader>
 
         {/* Navigation */}
@@ -54,11 +56,32 @@ const MobileSidebar = () => {
                 className={`capitalize hover:text-accent transition-all duration-300 font-medium tracking-wide w-full text-start text-lg`}
                 onClick={() => setIsOpen(false)}
               >
-                <span className={`py-1 ${isActive ? "text-accent border-b-2 border-accent" : ""}`}>{link.name}</span>
+                <div className="flex items-center gap-3">
+                  {link.icon && <link.icon className="h-5 w-5" />}
+                  <span className={`py-1 ${isActive ? "text-accent border-b-2 border-accent" : ""}`}>{link.name}</span>
+                </div>
               </Link>
             )
           })}
-          More to come here
+
+          {/* Additional navigation items can be added here */}
+          <p className="text-muted-foreground text-sm">More to come here</p>
+
+          {/* Divider before logout */}
+          <div className="h-px w-full bg-foreground/10 my-2" />
+
+          {/* Separate Logout Button */}
+          <Link href='/'>
+            <Button
+              variant="ghost"
+              className="w-full justify-start text-lg font-medium hover:text-destructive hover:bg-destructive/10 px-0"
+            >
+              <div className="flex items-center gap-3">
+                <LogOut className="h-5 w-5" />
+                <span>Logout</span>
+              </div>
+            </Button>
+          </Link>
         </nav>
 
         <SheetFooter className="mt-auto">

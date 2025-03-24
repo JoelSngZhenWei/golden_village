@@ -29,7 +29,7 @@ export function ThemeToggleButton() {
       }}
     >
       <Button
-        variant="themechange"
+        // variant="themechange"
         className="lg:shadow-lg overflow-hidden h-7 w-7"
         onClick={toggleTheme}
         aria-label="Toggle theme"
