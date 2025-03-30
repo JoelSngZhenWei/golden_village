@@ -41,9 +41,9 @@ export function HorizontalScroll({ items }: HorizontalScrollProps) {
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex-none w-[120px] transition-transform duration-300"
+            className="flex-none w-[120px] transition-transform duration-300 clickable"
           >
-            <div className="relative aspect-[2/3] border border-foreground/20 rounded-md overflow-hidden">
+            <div className="relative aspect-[2/3] border border-foreground/20 rounded-md overflow-hidden ">
               <Image src={item.image || "/placeholder.svg"} alt={item.title} fill className="object-cover" />
             </div>
             <p className="mt-2 text-sm truncate">{item.title}</p>

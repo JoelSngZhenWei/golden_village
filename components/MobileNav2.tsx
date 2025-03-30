@@ -29,18 +29,24 @@ const MobileSidebar = () => {
       </SheetTrigger>
       <SheetContent side="left" className="pl-5 w-[300px]">
         <SheetHeader className="mb-6 mt-6">
-          <div className="flex items-center space-x-4 pb-4">
-            <Avatar className="h-16 w-16 border-2 border-primary">
-              <AvatarImage src="/gigachad.jpg" alt="Matthew Chang" />
-              <AvatarFallback className="bg-muted">
-                <User className="h-8 w-8" />
-              </AvatarFallback>
-            </Avatar>
-            <div className="space-y-1">
-              <SheetTitle className="text-left text-xl font-bold">Matthew Chang</SheetTitle>
-              <p className="text-sm text-muted-foreground font-bold">Gold Class Member</p>
+          <Link
+            href="/profile"
+            className=''
+            onClick={() => setIsOpen(false)}
+          >
+            <div className="flex items-center space-x-4 pb-4 clickable">
+              <Avatar className="h-16 w-16 border-2 border-primary">
+                <AvatarImage src="/gigachad.jpg" alt="Matthew Chang" />
+                <AvatarFallback className="bg-muted">
+                  <User className="h-8 w-8" />
+                </AvatarFallback>
+              </Avatar>
+              <div className="space-y-1">
+                <SheetTitle className="text-left text-xl font-bold">Matthew Chang</SheetTitle>
+                <p className="text-sm text-muted-foreground font-bold">Gold Class Member</p>
+              </div>
             </div>
-          </div>
+          </Link>
           <div className="h-px w-full bg-foreground/20" />
         </SheetHeader>
 

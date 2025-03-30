@@ -53,7 +53,7 @@
   --popover-foreground: oklch(0.145 0 0);
   --primary: oklch(0.205 0 0);
   --primary-foreground: oklch(0.985 0 0);
-  --secondary: oklch(0.97 0 0);
+  --secondary: oklch(0.26 0.0024 247.92);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.556 0 0);
@@ -132,6 +132,6 @@
 }
 
 .clickable:active {
-  transform: scale(2); /* Adjust the scale as needed */
+  transform: scale(0.9); /* Adjust the scale as needed */
   transition: transform 0.1s ease; /* Quick grow on click */
 }

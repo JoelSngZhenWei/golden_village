@@ -14,7 +14,7 @@ export function BottomNav() {
     { name: "Movies", href: "/movies", icon: Film },
     { name: "Home", href: "/home", icon: Home },
     { name: "Rewards", href: "", icon: Trophy },
-    { name: "Profile", href: "", icon: User },
+    { name: "Profile", href: "/profile", icon: User },
   ]
 
   return (
