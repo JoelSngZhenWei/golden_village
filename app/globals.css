@@ -119,6 +119,21 @@
   body {
     @apply bg-background text-foreground;
   }
+
+  /* Hide scrollbar for all elements */
+  ::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for Firefox */
+  * {
+    scrollbar-width: none;
+  }
+
+  /* Hide scrollbar for IE and Edge */
+  * {
+    -ms-overflow-style: none;
+  }
 }
 
 .scrollbar-hide::-webkit-scrollbar {
@@ -128,10 +143,10 @@
 .clickable {
   transition: transform 30s ease;
   transition: transform 0.4s ease; /* Slow return on release */
-
 }
 
 .clickable:active {
   transform: scale(0.9); /* Adjust the scale as needed */
   transition: transform 0.1s ease; /* Quick grow on click */
 }
+
