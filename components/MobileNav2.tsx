@@ -24,8 +24,8 @@ const MobileSidebar = () => {
 
   return (
     <Sheet open={isOpen} onOpenChange={setIsOpen}>
-      <SheetTrigger className="flex justify-center items-center">
-        <Menu className="h-8 w-8 text-accent" />
+      <SheetTrigger className="flex justify-center items-center hover:bg-accent rounded-lg hover:text-primary text-accent">
+        <Menu className="h-8 w-8" />
       </SheetTrigger>
       <SheetContent side="left" className="pl-5 w-[300px]">
         <SheetHeader className="mb-6 mt-6">

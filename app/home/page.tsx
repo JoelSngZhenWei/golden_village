@@ -3,91 +3,40 @@ import CarouselComponent from "@/components/Carousel";
 import { Header } from "@/components/header";
 import { HorizontalScroll } from "@/components/horizontalscroll";
 import { InfoButton } from "@/components/InfoButton";
+import { carouselmovies } from "@/data/movies";
+import { movies } from "@/data/movies";
+import { generateShowtimes } from "@/utils/showtimes";
 
+console.log(generateShowtimes);
 
-// sample data for carousel movies
-const carouselmovies = {
-  captainamerica: {
-    title: "Captain America: Brave New World",
-    image: "/movieposters/captainamerica.JPG",
-    genre: "Action",
-    language: "English",
-  },
-  wicked: {
-    title: "Wicked",
-    image: "/movieposters/wicked.JPG",
-    genre: "Fantasy",
-    language: "English",
-  },
-  apple: {
-    title: "You are the Apple of My Eye",
-    image: "/movieposters/appleofmyeye.jpg",
-    genre: "Romance",
-    language: "Mandarin",
-  },
-  chhaava: {
-    title: "Chaava",
-    image: "/movieposters/chhaava.jpg",
-    genre: "Historical",
-    language: "Hindi",
-  },
-  snowwhite: {
-    title: "Snow White",
-    image: "/movieposters/snowwhite.jpeg",
-    genre: "Fantasy",
-    language: "English",
-  },
-  dragon: {
-    title: "Dragon",
-    image: "/movieposters/dragon.jpg",
-    genre: "Action",
-    language: "Tamil",
-  },
-  nezha: {
-    title: "Ne Zha 2",
-    image: "/movieposters/nezha.jpg",
-    genre: "Fantasy",
-    language: "Mandarin",
-  },
-}
+const latestTitles = [
+  "Snow White",
+  "Mickey 17",
+  "Close ur Kopitiam",
+  "Dragon",
+  "Mufasa",
+  "Ne Zha 2",
+  "Captain America: Brave New World",
+  "You are the Apple of my Eye",
+  "Chhaava",
+];
 
-// Sample data for movies
-const latestMovies = [
-  { title: "Snow White", image: "/movieposters/snowwhite.jpeg", genre: "Fantasy", language: "English" },
-  { title: "Mickey 17", image: "/movieposters/mickey17.jpg", genre: "Sci-Fi", language: "English" },
-  { title: "Close ur Kopitiam", image: "/movieposters/kopitiam.jpg", genre: "Drama", language: "Mandarin" },
-  { title: "Dragon", image: "/movieposters/dragon.jpg", genre: "Action", language: "Tamil" },
-  { title: "Mufasa", image: "/movieposters/mufasa.jpg", genre: "Fantasy", language: "English" },
-  { title: "Ne Zha 2", image: "/movieposters/nezha.jpg", genre: "Fantasy", language: "Mandarin" },
-  {
-    title: "Captain America: Brave New World",
-    image: "/movieposters/captainamerica.JPG",
-    genre: "Action",
-    language: "English",
-  },
-  {
-    title: "You are the Apple of my Eye",
-    image: "/movieposters/appleofmyeye.jpg",
-    genre: "Romance",
-    language: "Mandarin",
-  },
-  { title: "Chhaava", image: "/movieposters/chhaava.jpg", genre: "Historical", language: "Hindi" },
-]
+const recommendationTitles = [
+  "Mickey 17",
+  "Ne Zha 2",
+  "Mufasa",
+  "Chhaava",
+  "Wicked",
+];
 
-const recommendations = [
-  { title: "Mickey 17", image: "/movieposters/mickey17.jpg", genre: "Sci-Fi", language: "English" },
-  { title: "Ne Zha 2", image: "/movieposters/nezha.jpg", genre: "Fantasy", language: "Mandarin" },
-  { title: "Mufasa", image: "/movieposters/mufasa.jpg", genre: "Fantasy", language: "English" },
-  { title: "Chhaava", image: "/movieposters/chhaava.jpg", genre: "Historical", language: "Hindi" },
-  { title: "Wicked", image: "/movieposters/wicked.JPG", genre: "Fantasy", language: "English" },
-]
-
+const latestMovies = movies.filter(movie => latestTitles.includes(movie.title));
+const recommendations = movies.filter(movie => recommendationTitles.includes(movie.title));
 
 // Recommendation system information
 const recommendationInfo = {
   title: "Your Recommendations",
   description: (
-    <div className="space-y-4">
+    <span className="space-y-4">
       <div>
         Our recommendation system uses a combination of collaborative filtering and content-based algorithms to suggest
         content you might enjoy.
@@ -111,7 +60,7 @@ const recommendationInfo = {
       <div className="text-xs text-muted-foreground mt-4">
         You can reset your recommendation data at any time in your account settings.
       </div>
-    </div>
+    </span>
   ),
 }
 

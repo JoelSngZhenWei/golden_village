@@ -7,18 +7,6 @@ import Image from "next/image"
 // Notification data
 const notifications = [
   {
-    title: "You saved S$48.20 with your Member savings.",
-    subtitle: "",
-    action: "View your other benefits",
-    icon: <DollarSign className="h-24 w-24 opacity-40" />,
-    bgColor: "bg-orange-950",
-    textColor: "text-orange-100",
-    borderColor: "border-muted-foreground",
-    iconColor: "text-orange-100",
-    actionColor: "text-orange-100",
-    useImage: false,
-  },
-  {
     title: "Get ready to watch Snow White today!",
     subtitle: "7:30 PM at GV Bishan",
     action: "View ticket",
@@ -55,10 +43,22 @@ const notifications = [
     useImage: false,
   },
   {
+    title: "You saved S$48.20 with your Member savings.",
+    subtitle: "",
+    action: "View your other benefits",
+    icon: <DollarSign className="h-24 w-24 opacity-40" />,
+    bgColor: "bg-orange-950",
+    textColor: "text-orange-100",
+    borderColor: "border-muted-foreground",
+    iconColor: "text-orange-100",
+    actionColor: "text-orange-100",
+    useImage: false,
+  },
+  {
     title: "Upcoming Harry Potter Watch Party!",
     subtitle: "At GV Paya Lebar Quarter",
     action: "Register interest",
-    image: "/movieposters/harrypotter.jpg",
+    image: "/movieposters/harrypotter.JPG",
     bgColor: "bg-emerald-950",
     textColor: "text-emerald-100",
     borderColor: "border-muted-foreground",
@@ -75,17 +75,17 @@ export function ProfileActivityCards() {
       <div className="mb-6">
         <div className="relative group">
           <div
-            className="flex overflow-x-auto space-x-4 scrollbar-hide pb-4 px-1"
+            className="flex overflow-x-auto space-x-4 scrollbar-hide pb-4 px-1 snap-x snap-mandatory scroll-smooth"
             style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
           >
             {notifications.map((notification, index) => (
-              <div key={index}>
+              <div key={index} className="snap-center shrink-0">
                 <Card
                   className={`border w-[90vw] h-[200px] rounded-xl overflow-hidden relative flex flex-col ${notification.bgColor} ${notification.borderColor}`}
                 >
                   {/* Card Header for Title and Subtitle - 75% of card height */}
                   <CardHeader
-                    className={`pb-2 pt-4 px-5 relative z-10 border-b ${notification.borderColor} h-[150px] flex flex-col justify-end`}
+                    className={`pb-0 pt-4 px-5 relative z-10 border-b ${notification.borderColor} h-[150px] flex flex-col justify-end`}
                   >
                     <h3 className={`font-medium text-xl ${notification.textColor}`}>{notification.title}</h3>
                     {notification.subtitle && (
@@ -94,7 +94,7 @@ export function ProfileActivityCards() {
                   </CardHeader>
 
                   {/* Card Footer for Action - remaining 25% of height */}
-                  <CardFooter className="pt-2 pb-4 px-5 relative z-10 h-[25px] flex items-center">
+                  <CardFooter className="pt-0 pb-4 px-5 relative z-10 h-[25px] flex items-center">
                     <Link href="#" className={`text-sm font-medium flex items-center ${notification.actionColor}`}>
                       {notification.action}
                       <ChevronRight className="h-4 w-4 ml-1" />
@@ -102,14 +102,14 @@ export function ProfileActivityCards() {
                   </CardFooter>
 
                   {/* Large icon or image positioned to overflow off the right side */}
-                  <div className="absolute top-1/2 -right-6 -translate-y-1/2">
+                  <div className="absolute top-1/2 -right-7 -translate-y-1/2">
                     {notification.useImage ? (
-                      <div className="relative h-42 w-42 opacity-20">
+                      <div className="relative h-42 w-42 opacity-30  rounded-full">
                         <Image
                           src={notification.image || "/placeholder.svg"}
                           alt={notification.title}
-                          fill
-                          className="object-contain rounded-2xl"
+                          width={125}
+                          height={125}
                         />
                       </div>
                     ) : (
