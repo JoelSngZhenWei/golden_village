@@ -1,10 +1,8 @@
 import { BottomNav } from "@/components/bottom-nav"
 import { Header } from "@/components/header"
-import { Card, CardContent } from "@/components/ui/card"
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { ProfileCard } from "@/components/ProfileCard"
-import { ProfilePayment } from "@/components/ProfilePayment"
-import { Users, Building2, ChevronRight } from "lucide-react"
 import { ProfileDashboard } from "@/components/ProfileDashboard"
 
 export default function Profile() {
