@@ -53,6 +53,7 @@ export const movies = [
         genre: "Fantasy",
         language: "English",
         link: "snowwhite",
+        trailerUrl: "https://www.youtube.com/embed/iV46TJKL8cU?si=ZJmH7rLoAzZrL0lP&autoplay=1&muted=1&controls=0&showinfo=0&modestbranding=1&rel=0&fs=1&iv_load_policy=3&disablekb=1",
         cinema_timings: [
             { cinema: "GV Bishan", timings: generateShowtimes("2025-03-11", "2025-04-22") },
             { cinema: "GV Paya Lebar Quarter", timings: generateShowtimes("2025-03-12", "2025-04-12") },

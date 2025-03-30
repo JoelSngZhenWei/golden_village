@@ -16,10 +16,7 @@ import { BottomNav } from "@/components/bottom-nav"
 
 const targetmovie = "Snow White"
 const movie = movies.find((m) => m.title === targetmovie)
-
-// YouTube trailer URL - you can replace this with your specific URL
-const trailerUrl = "https://www.youtube.com/watch?v=Xt86DyW4wio" // Replace with your specific trailer URL
-
+const purchaseURL = `/movies/`+ movie?.link + `/purchase`
 console.log(generateShowtimes)
 
 // Helper function to group showtimes by date
@@ -59,7 +56,7 @@ export default function MovieDetailsPage() {
   const selectedCinemaTimings = movie.cinema_timings.find((cinema) => cinema.cinema === selectedCinema)
 
   return (
-    <section>
+    <section className="pb-20">
       <Header />
       <div className="container mx-auto py-8 px-4">
         {/* Back button - now with absolute positioning */}
@@ -78,47 +75,38 @@ export default function MovieDetailsPage() {
 
               {/* Trailer button overlay */}
               <Dialog open={isTrailerOpen} onOpenChange={setIsTrailerOpen}>
-                <DialogTrigger asChild>
-                  <Button
-                    className="absolute inset-0 m-auto w-16 h-16 rounded-full flex items-center justify-center bg-primary/80 hover:bg-primary text-primary-foreground"
-                    aria-label="Watch trailer"
-                  >
-                    <Play className="h-8 w-8 fill-current" />
-                  </Button>
-                </DialogTrigger>
-                <DialogContent className="sm:max-w-[800px] p-0 h-auto aspect-video">
-                    <DialogTitle>
-                        
-                    </DialogTitle>
-                  <iframe
-                    src={trailerUrl}
-                    className="w-full h-full aspect-video"
-                    title={`${movie.title} Trailer`}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  />
+                <DialogTrigger asChild></DialogTrigger>
+                <DialogContent className="sm:max-w-[800px] p-0 h-auto">
+                  <DialogTitle></DialogTitle>
+                  <div className="relative w-full pb-[56.25%]">
+                    <iframe
+                      className="absolute top-0 left-0 w-full h-full"
+                      src={movie.trailerUrl}
+                      title="YouTube video player"
+                      frameBorder="0"
+                      allow="accelerometer; autoplay; fullscreen; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
                 </DialogContent>
               </Dialog>
             </div>
 
-            <div className="mt-6 space-y-4 flex flex-row justify-between text-muted-foreground">
-              <div className="flex flex-row gap-x-3">
+            <div className="mt-6 flex items-center justify-between text-muted-foreground">
+              <div className="flex items-center gap-x-3">
                 <Film /> {movie.genre}
               </div>
-              <div className="flex flex-row gap-x-3">
+
+              <Button variant="outline" className="flex items-center gap-2" onClick={() => setIsTrailerOpen(true)}>
+                <Play className="h-5 w-5" />
+                Watch Trailer
+              </Button>
+
+              <div className="flex items-center gap-x-3">
                 <Globe /> {movie.language}
               </div>
             </div>
-
-            {/* Watch Trailer button (alternative placement) */}
-            <Button
-              variant="outline"
-              className="w-full mt-4 flex items-center justify-center gap-2"
-              onClick={() => setIsTrailerOpen(true)}
-            >
-              <Play className="h-5 w-5" />
-              Watch Trailer
-            </Button>
           </div>
 
           {/* Movie details and showtimes */}
@@ -159,7 +147,7 @@ export default function MovieDetailsPage() {
                           {dateGroup.times.map((time) => {
                             const timeOnly = time.split("T")[1].substring(0, 5)
                             return (
-                              <Button key={time} variant="outline" className="flex items-center justify-center gap-2">
+                              <Button key={time} variant="outline" className="flex items-center justify-center gap-2" onClick={() => router.push(purchaseURL)}>
                                 <Clock className="h-4 w-4" />
                                 {timeOnly}
                               </Button>
