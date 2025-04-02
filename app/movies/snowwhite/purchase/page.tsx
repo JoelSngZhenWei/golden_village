@@ -104,17 +104,17 @@ export default function PurchasePage() {
         </div>
 
         {/* Date selection */}
-        <div className="grid grid-cols-4 border-b border-neutral-800">
+        <div className="grid grid-cols-7 border-b border-neutral-800">
           {dates.map((date) => (
             <button
               key={`${date.day}-${date.month}`}
               className={cn(
                 "flex flex-col items-center justify-center py-3",
-                selectedDate === `${date.day} ${date.month}` ? "bg-neutral-800" : "",
+                selectedDate === `${date.day} ${date.month}` ? "bg-primary" : "",
               )}
               onClick={() => setSelectedDate(`${date.day} ${date.month}`)}
             >
-              <span className="text-xs text-neutral-400">{date.dayOfWeek}</span>
+              <span className="text-xs text-primary-foreground/80">{date.dayOfWeek}</span>
               <span className="text-lg font-bold">{date.day}</span>
               <span className="text-xs">{date.month}</span>
             </button>
