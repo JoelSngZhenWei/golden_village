@@ -26,19 +26,6 @@ import { Separator } from "./ui/separator"
 import { Checkbox } from "./ui/checkbox"
 import { RadioGroup, RadioGroupItem } from "./ui/radio-group"
 
-// Hardcoded movie data
-const movie = {
-    title: "Snow White",
-    image: "/placeholder.svg?height=400&width=300",
-    date: "Friday, June 14, 2024",
-    time: "7:30 PM",
-    outlet: "GV Plaza Singapure",
-    cinema: "Hall 8",
-    seats: ["F12", "F13"],
-    price: 12.99,
-    link: "snow-white",
-}
-
 // Hardcoded user data
 const userData = {
     name: "Matthew Chang",
