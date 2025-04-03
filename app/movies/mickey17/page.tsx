@@ -18,13 +18,13 @@ import BackButton from "@/components/backbutton"
 
 // Hardcoded movie data
 const movie = {
-  title: "Snow White",
-  genre: "Fantasy",
+  title: "Mickey 17",
+  genre: "Sci-Fi",
   language: "English",
-  image: "/movieposters/snowwhite.jpeg",
+  image: "/movieposters/mickey17.jpg",
   trailerUrl:
-    "https://www.youtube.com/embed/iV46TJKL8cU?si=ZJmH7rLoAzZrL0lP&autoplay=1&muted=1&controls=0&showinfo=0&modestbranding=1&rel=0&fs=1&iv_load_policy=3&disablekb=1",
-  link: "snowwhite",
+    "https://www.youtube.com/embed/osYpGSz_0i4?si=_lrpE0DaK1FKklK1&autoplay=1&muted=1&controls=0&showinfo=0&modestbranding=1&rel=0&fs=1&iv_load_policy=3&disablekb=1",
+  link: "mickey17",
   cinema_timings: [
     {
       cinema: "GV Bishan",

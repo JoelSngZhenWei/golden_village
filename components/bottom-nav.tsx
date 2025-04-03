@@ -1,16 +1,17 @@
 'use client'
 
-import { Home, Utensils, Film, Trophy, User } from "lucide-react"
+import { Home, Film, Trophy, User } from "lucide-react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { cn } from "@/lib/utils"
+import { FaConciergeBell } from "react-icons/fa"
 
 export function BottomNav() {
   const pathname = usePathname()
   const activeSegment = "/" + pathname.split("/")[1]
 
   const navigation = [
-    { name: "Dine", href: "", icon: Utensils },
+    { name: "Dine", href: "/dine", icon: FaConciergeBell },
     { name: "Movies", href: "/movies", icon: Film },
     { name: "Home", href: "/home", icon: Home },
     { name: "Rewards", href: "", icon: Trophy },

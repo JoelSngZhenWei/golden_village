@@ -18,13 +18,13 @@ import BackButton from "@/components/backbutton"
 
 // Hardcoded movie data
 const movie = {
-  title: "Snow White",
-  genre: "Fantasy",
-  language: "English",
-  image: "/movieposters/snowwhite.jpeg",
+  title: "You are the Apple of my Eye",
+  image: "/movieposters/appleofmyeye.jpg",
+  genre: "Romance",
+  language: "Mandarin",
+  link: "you-are-the-apple-of-my-eye",
   trailerUrl:
-    "https://www.youtube.com/embed/iV46TJKL8cU?si=ZJmH7rLoAzZrL0lP&autoplay=1&muted=1&controls=0&showinfo=0&modestbranding=1&rel=0&fs=1&iv_load_policy=3&disablekb=1",
-  link: "snowwhite",
+    "https://www.youtube.com/embed/v5H6wE47FrI?si=4bcSFHvqAYyb2AGS&autoplay=1&muted=1&controls=0&showinfo=0&modestbranding=1&rel=0&fs=1&iv_load_policy=3&disablekb=1",
   cinema_timings: [
     {
       cinema: "GV Bishan",

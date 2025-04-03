@@ -9,7 +9,7 @@ export const carouselmovies = {
     },
     wicked: {
         title: "Wicked",
-        image: "/movieposters/wicked.JPG",
+        image: "/movieposters/wicked.png",
         genre: "Fantasy",
         language: "English",
     },

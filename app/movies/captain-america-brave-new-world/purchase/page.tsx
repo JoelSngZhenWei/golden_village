@@ -13,7 +13,7 @@ import { movies } from "@/data/movies"
 type SeatStatus = "available" | "selected" | "unavailable"
 
 // type SeatStatus = "available" | "unavailable";
-const targetmovie = "Snow White"
+const targetmovie = "Captain America: Brave New World"
 const movie = movies.find((m) => m.title === targetmovie)
 const purchaseURL2 = `/movies/` + movie?.link + `/purchase/purchase2`
 
