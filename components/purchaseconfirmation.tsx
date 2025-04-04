@@ -72,7 +72,7 @@ const savedPaymentMethods = [
 ]
 interface PurchaseConfirmationProps {
     movieTitle?: string,
-  }
+}
 const PurchaseConfirmation = ({ movieTitle = "Snow White" }: PurchaseConfirmationProps) => {
     // Movie data with title from props
     const movie = {
@@ -382,14 +382,14 @@ const PurchaseConfirmation = ({ movieTitle = "Snow White" }: PurchaseConfirmatio
                             <CardTitle>Purchase Summary</CardTitle>
                             <CardDescription>Your transaction was successful</CardDescription>
                         </CardHeader>
-                        <CardContent className="space-y-4">
-                            <div className="rounded-lg bg-primary/10 p-4 text-center">
+                        <CardContent className="space-y-2">
+                            <div className="rounded-lg text-center">
                                 <Check className="h-8 w-8  mx-auto mb-2 text-accent" />
-                                <h3 className="font-medium text-lg ">Payment Confirmed</h3>
+                                <h3 className="font-medium ">Payment Confirmed</h3>
                                 <p className="text-sm text-muted-foreground">Transaction ID: #TRX78912345</p>
                             </div>
 
-                            <div className="space-y-3">
+                            <div className="space-y-2">
                                 <div className="flex justify-between items-center">
                                     <div className="flex items-center gap-2">
                                         <Calendar className="h-4 w-4 text-muted-foreground" />
@@ -489,7 +489,7 @@ const PurchaseConfirmation = ({ movieTitle = "Snow White" }: PurchaseConfirmatio
                             </div>
                             <div className="text-center text-sm text-muted-foreground">
                                 <p>A confirmation has been sent to {userData.email}</p>
-                                <p>Please show this ticket at the entrance</p>
+                                <p>Please show this QR or your account GV bar code when collecting your order</p>
                             </div>
                         </CardContent>
                         <CardFooter className="flex flex-col gap-2"></CardFooter>

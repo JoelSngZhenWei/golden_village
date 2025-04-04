@@ -1,13 +1,13 @@
 import { BottomNav } from "@/components/bottom-nav"
+import DeliveryConfirmation from "@/components/DeliveryConfirmation"
 import { Header } from "@/components/header"
-import OrderConfirmation from "@/components/OrderConfirmation"
 
-export default function order() {
+export default function deliver2() {
   return (
     <section className="pb-20">
       <Header />
 
-      <OrderConfirmation />
+      <DeliveryConfirmation />
       <BottomNav />
     </section>
   )

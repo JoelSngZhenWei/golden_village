@@ -3,7 +3,7 @@
 import { useState } from "react"
 import Image from "next/image"
 import { useRouter } from "next/navigation"
-import { Minus, Plus, ShoppingCart } from "lucide-react"
+import { Minus, Plus, ShoppingCart, Film, MapPin, Clock } from 'lucide-react'
 
 import { BottomNav } from "@/components/bottom-nav"
 import { Header } from "@/components/header"
@@ -11,6 +11,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
+import RobotCard from "@/components/Robot"
 
 // First, let's define proper types for our snack item
 type Snack = {
@@ -161,8 +163,8 @@ function SnackItem({
           <Image
             src={snack.image || "/placeholder.svg"}
             alt={snack.name}
-            width={50}
-            height={50}
+            width={80}
+            height={80}
             className="rounded-md"
           />
         </div>
@@ -221,8 +223,17 @@ function CartSummary({
   )
 }
 
+// Hardcoded movie session data
+const movieSession = {
+  hall: "Hall 5",
+  seat: "F12",
+  movie: "Dune: Part Two",
+  startTime: "7:30 PM",
+  endTime: "10:15 PM",
+}
+
 // Update the main component with proper types for the functions
-export default function Order() {
+export default function Deliver() {
   const router = useRouter()
   const [cart, setCart] = useState<CartItem[]>([])
 
@@ -263,17 +274,48 @@ export default function Order() {
   const handleContinue = () => {
     // In a real app, you might want to save the cart state
     // For this mockup, we'll just navigate to the next page
-    router.push("/dine/order/order2")
+    router.push("/dine/deliver/deliver2")
   }
 
   return (
     <section className="pb-32 bg-background min-h-screen">
       <Header />
-
       <div className="container px-4 py-6">
-        <h1 className="text-2xl font-bold mb-6">Select Your Snacks</h1>
 
-        <ScrollArea className="h-[calc(100vh-280px)]">
+        <RobotCard />
+
+        {/* Prominent location and movie time alert */}
+        <Alert className="mb-6 border-none">
+          <div className="flex items-center gap-2">
+            <Film className="h-5 w-5 text-primary" />
+            <AlertTitle className="text-primary-foreground font-bold">{movieSession.movie}</AlertTitle>
+
+          </div>
+          <AlertDescription className="mt-2 text-primary-foreground/80">
+          <h1 className="font-bold tracking-wide">
+            You are watching {movieSession.movie}
+          </h1>
+            <div className="flex items-center gap-2 mb-1">
+              <MapPin className="h-4 w-4 text-accent" />
+              <span className="font-medium">
+                {movieSession.hall}, Seat {movieSession.seat}
+              </span>
+            </div>
+            <div className="flex items-center gap-2">
+              <Clock className="h-4 w-4 text-accent" />
+              <span>
+                {movieSession.startTime} - {movieSession.endTime}
+              </span>
+            </div>
+            <p className="mt-2 text-sm">
+              Your order will be delivered directly to your row by our robot waiter during the movie.
+            </p>
+          </AlertDescription>
+        </Alert>
+
+        <h1 className="text-2xl font-bold mb-6">Order Snacks to Your Seat</h1>
+
+        <ScrollArea className="h-[calc(100vh-380px)]">
           {Object.entries(snacksByCategory).map(([category, categorySnacks]) => (
             <div key={category} className="mb-6">
               <h2 className="text-lg font-semibold mb-3">{category}</h2>
@@ -295,7 +337,7 @@ export default function Order() {
       <CartSummary items={cart} total={totalPrice} />
 
       <div className="fixed bottom-0 left-0 right-0 p-4 bg-background border-t z-20">
-        <Button className="w-full" variant={'gv'} size="lg" disabled={cart.length === 0} onClick={handleContinue}>
+        <Button className="w-full" size="lg" variant='gv' disabled={cart.length === 0} onClick={handleContinue}>
           Continue to Checkout
         </Button>
       </div>
@@ -304,4 +346,3 @@ export default function Order() {
     </section>
   )
 }
-

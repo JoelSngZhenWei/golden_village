@@ -87,7 +87,7 @@ const savedPaymentMethods = [
     },
 ]
 
-const OrderConfirmation = () => {
+const DeliveryConfirmation = () => {
     const router = useRouter()
     const [step, setStep] = useState(1)
     const [isProcessing, setIsProcessing] = useState(false)
@@ -531,7 +531,7 @@ const OrderConfirmation = () => {
                             </div>
                             <div className="text-center text-sm text-muted-foreground">
                                 <p>A confirmation has been sent to {userData.email}</p>
-                                <p>Please show this QR or your account GV bar code when collecting your order</p>
+                                <p>Please scan this QR or your account GV bar code when collecting your order from GV-Bot.</p>
                             </div>
                         </CardContent>
                         <CardFooter className="flex flex-col gap-2"></CardFooter>
@@ -587,5 +587,5 @@ const OrderConfirmation = () => {
     )
 }
 
-export default OrderConfirmation
+export default DeliveryConfirmation
 
