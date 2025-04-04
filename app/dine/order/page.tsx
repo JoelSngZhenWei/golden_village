@@ -207,7 +207,7 @@ function CartSummary({
   total: number
 }) {
   return (
-    <div className="fixed bottom-20 left-0 right-0 bg-background border-t shadow-lg p-4 z-10">
+    <div className="fixed bottom-18 left-0 right-0 bg-background border-t shadow-lg p-4 z-10">
       <div className="flex justify-between items-center mb-2">
         <div className="flex items-center">
           <ShoppingCart className="mr-2 h-5 w-5" />

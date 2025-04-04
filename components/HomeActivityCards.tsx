@@ -144,7 +144,7 @@ export function HomeActivityCards() {
             {notifications.map((notification, index) => (
               <div key={index} className="snap-center shrink-0">
                 <Card
-                  className={`border w-[90vw] h-[200px] rounded-xl overflow-hidden relative flex flex-col ${notification.useImage
+                  className={`border w-[80vw] h-[200px] rounded-xl overflow-hidden relative flex flex-col ${notification.useImage
                     ? notification.bgColor.replace("bg-", "bg-opacity-70 bg-")
                     : notification.bgColor
                     } ${notification.borderColor}`}
