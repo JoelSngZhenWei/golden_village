@@ -4,7 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { Card, CardContent } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel"
+import { Carousel, CarouselContent, CarouselItem} from "@/components/ui/carousel"
 import { BookmarkIcon, TicketIcon } from "lucide-react"
 
 // Define the movie type
@@ -35,13 +35,13 @@ export default function CarouselComponent({ movies }: MovieCarouselProps) {
 
   return (
     <div className="container mx-auto py-6">
-      <Carousel className="w-full max-w-4xl mx-auto">
+      <Carousel className="w-full max-w-4xl mx-auto px-5">
         <CarouselContent>
           {movieArray.map((movie, index) => (
             <CarouselItem key={index}>
               <div className="py-2 px-4">
                 <Card className="p-0 overflow-hidden border border-foreground/20">
-                  <CardContent className="relative p-0 h-[550px] flex items-center justify-center">
+                  <CardContent className="relative p-0 h-[500px] flex items-center justify-center">
                     <Image
                       src={movie.image || `/placeholder.svg?height=300&width=500&text=${movie.title}`}
                       alt={movie.title}
@@ -80,8 +80,6 @@ export default function CarouselComponent({ movies }: MovieCarouselProps) {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <CarouselPrevious className="left-2" />
-        <CarouselNext className="right-2" />
       </Carousel>
     </div>
   )
