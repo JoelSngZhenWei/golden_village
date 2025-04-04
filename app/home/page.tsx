@@ -1,6 +1,7 @@
 import { BottomNav } from "@/components/bottom-nav";
 import CarouselComponent from "@/components/Carousel";
 import { Header } from "@/components/header";
+import { HomeActivityCards } from "@/components/HomeActivityCards";
 import { HorizontalScroll } from "@/components/horizontalscroll";
 import { InfoButton } from "@/components/InfoButton";
 import { carouselmovies } from "@/data/movies";
@@ -79,6 +80,11 @@ export default function Home() {
           <div>
             <h2 className="text-xl font-bold mb-4">Latest Movies</h2>
             <HorizontalScroll items={latestMovies} />
+          </div>
+
+          <div>
+            <h2 className="text-xl font-bold mb-4">Explore</h2>
+            <HomeActivityCards />
           </div>
 
           {/* Recommendations */}
