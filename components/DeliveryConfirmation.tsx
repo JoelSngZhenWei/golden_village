@@ -126,7 +126,7 @@ const DeliveryConfirmation = () => {
     }
 
     const handleFinish = () => {
-        router.push("/")
+        router.push("/home")
     }
 
     const togglePaymentMethods = () => {
