@@ -13,7 +13,7 @@ const notifications = [
     image: "/movieposters/snowwhite.jpeg",
     bgColor: "bg-blue-950",
     textColor: "text-blue-100",
-    borderColor: "border-muted-foreground",
+    borderColor: "border-muted-foreground/50",
     iconColor: "text-blue-100",
     actionColor: "text-blue-100",
     useImage: true,
@@ -25,7 +25,7 @@ const notifications = [
     image: "/movieposters/chhaava.jpg",
     bgColor: "bg-purple-950",
     textColor: "text-purple-100",
-    borderColor: "border-muted-foreground",
+    borderColor: "border-muted-foreground/50",
     iconColor: "text-purple-100",
     actionColor: "text-purple-100",
     useImage: true,
@@ -37,7 +37,7 @@ const notifications = [
     icon: <Coins className="h-24 w-24 opacity-40" />,
     bgColor: "bg-amber-950",
     textColor: "text-amber-100",
-    borderColor: "border-muted-foreground",
+    borderColor: "border-muted-foreground/50",
     iconColor: "text-amber-100",
     actionColor: "text-amber-100",
     useImage: false,
@@ -49,7 +49,7 @@ const notifications = [
     icon: <DollarSign className="h-24 w-24 opacity-40" />,
     bgColor: "bg-orange-950",
     textColor: "text-orange-100",
-    borderColor: "border-muted-foreground",
+    borderColor: "border-muted-foreground/50",
     iconColor: "text-orange-100",
     actionColor: "text-orange-100",
     useImage: false,
@@ -61,7 +61,7 @@ const notifications = [
     image: "/movieposters/harrypotter.JPG",
     bgColor: "bg-emerald-950",
     textColor: "text-emerald-100",
-    borderColor: "border-muted-foreground",
+    borderColor: "border-muted-foreground/50",
     iconColor: "text-emerald-100",
     actionColor: "text-emerald-100",
     useImage: true,
@@ -102,14 +102,14 @@ export function ProfileActivityCards() {
                   </CardFooter>
 
                   {/* Large icon or image positioned to overflow off the right side */}
-                  <div className="absolute top-1/2 -right-7 -translate-y-1/2">
+                  <div className="absolute top-2/3 -right-7 -translate-y-1/2">
                     {notification.useImage ? (
-                      <div className="relative h-42 w-42 opacity-30  rounded-full">
+                      <div className="relative opacity-30  rounded-full">
                         <Image
                           src={notification.image || "/placeholder.svg"}
                           alt={notification.title}
-                          width={125}
-                          height={125}
+                          width={250}
+                          height={250}
                         />
                       </div>
                     ) : (

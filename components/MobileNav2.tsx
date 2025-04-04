@@ -3,10 +3,11 @@
 import { useState, useEffect } from "react"
 import { usePathname } from "next/navigation"
 import Link from "next/link"
-import { Menu, User, HomeIcon, LogOut } from "lucide-react"
+import { Menu, User, HomeIcon, LogOut, } from "lucide-react"
 import { Sheet, SheetContent, SheetFooter, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
+// import GlowButton from "./glow-button"
 
 // Updated links array without Logout
 const links = [
@@ -29,11 +30,7 @@ const MobileSidebar = () => {
       </SheetTrigger>
       <SheetContent side="left" className="pl-5 w-[300px]">
         <SheetHeader className="mb-6 mt-6">
-          <Link
-            href="/profile"
-            className=''
-            onClick={() => setIsOpen(false)}
-          >
+          <Link href="/profile" className="" onClick={() => setIsOpen(false)}>
             <div className="flex items-center space-x-4 pb-4 clickable">
               <Avatar className="h-16 w-16 border-2 border-primary">
                 <AvatarImage src="/gigachad.jpg" alt="Matthew Chang" />
@@ -70,11 +67,33 @@ const MobileSidebar = () => {
             )
           })}
 
-          {/* Additional navigation items can be added here */}
-          <p className="text-muted-foreground text-sm">More to come here</p>
+          {/* Separator before Dev Tools section */}
+          {/* <div className="h-px w-full bg-foreground/10 my-2" /> */}
+
+          {/* Dev Tools Section */}
+          {/* <div className="w-full"> */}
+            {/* <div className="flex items-center gap-3 mb-4"> */}
+              {/* <Terminal className="h-5 w-5 text-muted-foreground" /> */}
+              {/* <p className="text-muted-foreground text-sm font-medium">Dev Tools</p> */}
+            {/* </div> */}
+
+            {/* <div className="pl-8"> */}
+              {/* <Link href="/dev/glow" className="block mb-3">
+                <div className="flex items-center gap-3">
+                  <Code className="h-5 w-5" />
+                  <span className="text-base font-medium">Glow Effect</span>
+                </div>
+              </Link>
+
+              <GlowButton /> */}
+            {/* </div> */}
+          {/* </div> */}
+ 
+          {/* Separator after Dev Tools section */}
+          <div className="h-px w-full bg-foreground/10 my-2" />
 
           {/* Separate Logout Button */}
-          <Link href='/'>
+          <Link href="/">
             <Button
               variant="ghost"
               className="w-full justify-start text-lg font-medium hover:text-destructive hover:bg-destructive/10 px-0"

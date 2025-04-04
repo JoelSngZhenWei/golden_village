@@ -23,7 +23,7 @@ export default function Home() {
         <div className="container px-2 h-full">
           <div className="flex flex-col items-center justify-between h-full pt-[65vh] pb-10">
             <div className="text-white text-center mb-auto">
-              <h2 className="text-lg font-bold tracking-wide">Movies. <span className="text-accent">Like never before.</span></h2>
+              <h2 className="text-lg font-bold tracking-wide">Movies. <span className="text-accent">And more.</span></h2>
             </div>
 
             {/* Login Group - positioned at bottom like OCBC app */}
