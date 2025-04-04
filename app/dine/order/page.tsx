@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
+import BackButton from "@/components/backbutton"
 
 // First, let's define proper types for our snack item
 type Snack = {
@@ -269,7 +270,7 @@ export default function Order() {
   return (
     <section className="pb-32 bg-background min-h-screen">
       <Header />
-
+      <BackButton/>
       <div className="container px-4 py-6">
         <h1 className="text-2xl font-bold mb-6">Select Your Snacks</h1>
 

@@ -13,6 +13,7 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import { Separator } from "@/components/ui/separator"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import RobotCard from "@/components/Robot"
+import BackButton from "@/components/backbutton"
 
 // First, let's define proper types for our snack item
 type Snack = {
@@ -280,6 +281,7 @@ export default function Deliver() {
   return (
     <section className="pb-32 bg-background min-h-screen">
       <Header />
+      <BackButton />
       <div className="container px-4 py-6">
 
         <RobotCard />
