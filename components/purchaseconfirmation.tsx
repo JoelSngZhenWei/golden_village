@@ -130,7 +130,7 @@ const PurchaseConfirmation = ({ movieTitle = "Snow White" }: PurchaseConfirmatio
     }
 
     const handleFinish = () => {
-        router.push("/movies")
+        router.push("/home")
     }
 
     const togglePaymentMethods = () => {
@@ -174,7 +174,7 @@ const PurchaseConfirmation = ({ movieTitle = "Snow White" }: PurchaseConfirmatio
                 </CardHeader>
             </Card>
 
-            <div className=" h-[65vh] flex flex-col justify-between border rounded-lg border-muted-foreground pt-4">
+            <div className=" min-h-[65vh] flex flex-col justify-between border rounded-lg border-muted-foreground pt-4">
                 {/* Step 1: Personal Details */}
                 {step === 1 && (
                     <Card>
@@ -513,7 +513,7 @@ const PurchaseConfirmation = ({ movieTitle = "Snow White" }: PurchaseConfirmatio
                     {/* Only show Download Tickets button at the final stage */}
                     {step === 5 ? (
                         <Button variant="outline" className="">
-                            Download Tickets
+                            Download
                         </Button>
                     ) : (
                         <div></div> // Empty div to maintain layout

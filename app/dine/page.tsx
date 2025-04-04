@@ -14,7 +14,7 @@ export default function FoodAndDrinks() {
         </>
       ),
       image: "/food/order.png",
-      href: "/dine/order",
+      href: "/dine/deliver",
       isOrderCard: true,
     },
     {
@@ -28,7 +28,7 @@ export default function FoodAndDrinks() {
       title: "Snacks",
       subtitle: "Classic movie treats and refreshments",
       image: "/food/snacks.png",
-      href: "",
+      href: "/dine/order",
       isOrderCard: false,
     },
   ]
