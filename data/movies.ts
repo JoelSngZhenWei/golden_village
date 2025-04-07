@@ -6,42 +6,50 @@ export const carouselmovies = {
         image: "/movieposters/captainamerica.JPG",
         genre: "Action",
         language: "English",
+        rating: 4.5
     },
     wicked: {
         title: "Wicked",
         image: "/movieposters/wicked.png",
         genre: "Fantasy",
         language: "English",
+        rating: 4.8
     },
     apple: {
         title: "You are the Apple of My Eye",
         image: "/movieposters/appleofmyeye.jpg",
         genre: "Romance",
         language: "Mandarin",
+        rating: 3.9
     },
     chhaava: {
         title: "Chaava",
         image: "/movieposters/chhaava.jpg",
         genre: "Historical",
         language: "Hindi",
+        rating: 4.7
     },
     snowwhite: {
         title: "Snow White",
         image: "/movieposters/snowwhite.jpeg",
         genre: "Fantasy",
         language: "English",
+
+        rating: 3.5
     },
     dragon: {
         title: "Dragon",
         image: "/movieposters/dragon.jpg",
         genre: "Action",
         language: "Tamil",
+        rating: 4.5
     },
     nezha: {
         title: "Ne Zha 2",
         image: "/movieposters/nezha.jpg",
         genre: "Fantasy",
         language: "Mandarin",
+        rating: 4.7
     },
 
 }
@@ -60,6 +68,8 @@ export const movies = [
             { cinema: "GV Plaza Singapura", timings: generateShowtimes("2025-03-30", "2025-04-13") },
             { cinema: "GV Katong", timings: generateShowtimes("2025-03-28", "2025-04-11") },
         ],
+        rating: 3.5
+
     },
     {
         title: "Mickey 17",
@@ -73,6 +83,8 @@ export const movies = [
             { cinema: "GV Plaza Singapura", timings: generateShowtimes("2025-03-30", "2025-04-13") },
             { cinema: "GV Katong", timings: generateShowtimes("2025-03-28", "2025-04-11") },
         ],
+        rating: 4
+
     },
     {
         title: "Close ur Kopitiam",
@@ -86,6 +98,8 @@ export const movies = [
             { cinema: "GV Plaza Singapura", timings: generateShowtimes("2025-03-30", "2025-04-13") },
             { cinema: "GV Katong", timings: generateShowtimes("2025-03-28", "2025-04-11") },
         ],
+        rating: 4
+
     },
     {
         title: "Dragon",
@@ -99,6 +113,8 @@ export const movies = [
             { cinema: "GV City Square", timings: generateShowtimes("2025-03-30", "2025-04-13") },
             { cinema: "GV Tampines", timings: generateShowtimes("2025-03-30", "2025-04-13") },
         ],
+        rating: 4.5
+
     },
     {
         title: "Mufasa",
@@ -112,6 +128,8 @@ export const movies = [
             { cinema: "GV Plaza Singapura", timings: generateShowtimes("2025-03-30", "2025-04-13") },
             { cinema: "GV Katong", timings: generateShowtimes("2025-03-28", "2025-04-11") },
         ],
+        rating: 4
+
     },
     {
         title: "Ne Zha 2",
@@ -125,6 +143,7 @@ export const movies = [
             { cinema: "GV Plaza Singapura", timings: generateShowtimes("2025-03-30", "2025-04-13") },
             { cinema: "GV Katong", timings: generateShowtimes("2025-03-28", "2025-04-11") },
         ],
+        rating: 4.7
     },
     {
         title: "Captain America: Brave New World",
@@ -138,6 +157,8 @@ export const movies = [
             { cinema: "GV Plaza Singapura", timings: generateShowtimes("2025-03-30", "2025-04-13") },
             { cinema: "GV Katong", timings: generateShowtimes("2025-03-28", "2025-04-11") },
         ],
+        rating: 4.5
+
     },
     {
         title: "You are the Apple of my Eye",
@@ -151,6 +172,8 @@ export const movies = [
             { cinema: "GV Plaza Singapura", timings: generateShowtimes("2025-03-30", "2025-04-13") },
             { cinema: "GV Katong", timings: generateShowtimes("2025-03-28", "2025-04-11") },
         ],
+        rating: 3.9
+
     },
     {
         title: "Chhaava",
@@ -164,5 +187,7 @@ export const movies = [
             { cinema: "GV Plaza Singapura", timings: generateShowtimes("2025-03-30", "2025-04-13") },
             { cinema: "GV Katong", timings: generateShowtimes("2025-03-28", "2025-04-11") },
         ],
+        rating: 4.7
+
     },
 ];
