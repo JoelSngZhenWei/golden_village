@@ -295,7 +295,7 @@ export default function Order() {
 
       <CartSummary items={cart} total={totalPrice} />
 
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-background border-t z-20">
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-background border-t z-100">
         <Button className="w-full" variant={'gv'} size="lg" disabled={cart.length === 0} onClick={handleContinue}>
           Continue to Checkout
         </Button>

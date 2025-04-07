@@ -294,9 +294,9 @@ export default function Deliver() {
 
           </div>
           <AlertDescription className="mt-2 text-primary-foreground/80">
-          <h1 className="font-bold tracking-wide">
-            You are watching {movieSession.movie}
-          </h1>
+            <h1 className="font-bold tracking-wide">
+              You are watching {movieSession.movie}
+            </h1>
             <div className="flex items-center gap-2 mb-1">
               <MapPin className="h-4 w-4 text-accent" />
               <span className="font-medium">
@@ -338,7 +338,7 @@ export default function Deliver() {
 
       <CartSummary items={cart} total={totalPrice} />
 
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-background border-t z-20">
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-background border-t z-100">
         <Button className="w-full" size="lg" variant='gv' disabled={cart.length === 0} onClick={handleContinue}>
           Continue to Checkout
         </Button>
